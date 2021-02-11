@@ -26,6 +26,9 @@ project root directory),
 which is the root directory for our template files*/
 const views = join(__dirname, '..', 'views');
 
+const staticAssets = join(__dirname, '..', 'static');
+app.useStaticAssets(staticAssets);
+
 /*Finally, configure nunjucks, setting views and express
 declared above*/
 nunjucks.configure(views, { express });
